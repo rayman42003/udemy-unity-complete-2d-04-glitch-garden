@@ -12,7 +12,6 @@ public class LevelLoader : MonoBehaviour
 
     private void Start() {
         string currScene = SceneManager.GetActiveScene().name;
-        Debug.Log(currScene);
         switch (currScene) {
             case SPLASH_SCREEN:
                 StartCoroutine(delayedLoad(START_MENU, splashScreenLoadTime));
