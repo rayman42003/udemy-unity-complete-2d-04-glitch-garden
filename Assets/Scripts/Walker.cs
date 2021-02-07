@@ -6,7 +6,15 @@ public class Walker : MonoBehaviour
     [SerializeField]
     private float walkSpeed = 1f;
 
+    private bool isWalking = false;
+
     private void Update() {
-        transform.Translate(Vector2.left * walkSpeed * Time.deltaTime);
+        if (isWalking) {
+            transform.Translate(Vector2.left * walkSpeed * Time.deltaTime);
+        }
+    }
+
+    private void toggleWalking() {
+        isWalking = true;
     }
 }
