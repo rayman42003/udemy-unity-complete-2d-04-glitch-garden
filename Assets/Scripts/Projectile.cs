@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
     private float moveSpeed = 1f;
 
     private void Update() {
-        transform.Translate(Vector2.right * moveSpeed * Time.deltaTime, Space.World);
+        transform.position += Vector3.right * moveSpeed * Time.deltaTime;
         transform.Rotate(Vector3.forward * 120 * Time.deltaTime);
     }
 }
