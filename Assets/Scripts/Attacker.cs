@@ -8,9 +8,9 @@ public class Attacker : MonoBehaviour
     [SerializeField]
     private bool destroyOnCollision = true;
 
-    private void OnCollisionEnter2D(Collision2D collision) {
+    private void OnCollisionStay2D(Collision2D collision) {
         Damagable damagable = collision.gameObject.GetComponent<Damagable>();
-        if (damagable) {
+        if (damagable && !damagable.isInvulnerable()) {
             damagable.takeDamage(attackPower);
             if (destroyOnCollision) {
                 Destroy(gameObject);
