@@ -17,4 +17,8 @@ public class Damagable : MonoBehaviour
         }
         onDamaged.Invoke();
     }
+
+    public void registerOnKilled(UnityAction action) {
+        onDamaged.AddListener(action);
+    }
 }

@@ -7,6 +7,6 @@ public class Projectile : MonoBehaviour
 
     private void Update() {
         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
-        transform.Rotate(Vector3.forward * 120 * Time.deltaTime);
+        transform.Rotate(Vector3.forward * -120 * Time.deltaTime);
     }
 }
