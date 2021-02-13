@@ -6,7 +6,8 @@ public class MouseListener : MonoBehaviour
     private GameObject defender;
 
     private void OnMouseDown() {
-        Debug.Log("mouse was clicked");
-        Instantiate(defender, transform.position, Quaternion.identity);
+        Vector2 screenClickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 worldClickPos = Camera.main.ScreenToWorldPoint(screenClickPos);
+        Instantiate(defender, worldClickPos, Quaternion.identity);
     }
 }
