@@ -3,10 +3,13 @@ using UnityEngine.Events;
 
 public class DefenderIcon : MonoBehaviour
 {
-    private GameObjectEvent onDefenderSelected = new GameObjectEvent();
-
     [SerializeField]
     private Color disabledColor = new Color(32, 32, 32);
+
+    [SerializeField]
+    private Defender defenderPrefab;
+
+    private DefenderEvent onDefenderSelected = new DefenderEvent();
 
     private void Start() {
         foreach (DefenderIcon defender in FindObjectsOfType<DefenderIcon>()) {
@@ -18,7 +21,7 @@ public class DefenderIcon : MonoBehaviour
 
     private void OnMouseDown() {
         enableIcon();
-        onDefenderSelected.Invoke(this.gameObject);
+        onDefenderSelected.Invoke(defenderPrefab);
     }
 
     private void enableIcon() {
@@ -29,7 +32,7 @@ public class DefenderIcon : MonoBehaviour
         GetComponent<SpriteRenderer>().color = disabledColor;
     }
 
-    public void registerOnDefenderSelected(UnityAction<GameObject> action) {
+    public void registerOnDefenderSelected(UnityAction<Defender> action) {
         onDefenderSelected.AddListener(action);
     }
 }
