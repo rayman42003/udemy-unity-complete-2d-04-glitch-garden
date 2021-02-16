@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242084317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.33, y: 0, z: 1}
+  m_LocalPosition: {x: -0.109, y: 0, z: 1}
   m_LocalScale: {x: 0.07398445, y: 0.832325, z: 0.66586}
   m_Children: []
   m_Father: {fileID: 1579239462}
@@ -403,6 +403,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd641c532ae3e594e81814f301506299, type: 3}
+--- !u!1 &746937856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 746937856, guid: 3693dee65b9b5eb4fb3c5d033ebba393,
+    type: 3}
+  m_PrefabInstance: {fileID: 5787943000736863464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &746937858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 746937858, guid: 3693dee65b9b5eb4fb3c5d033ebba393,
+    type: 3}
+  m_PrefabInstance: {fileID: 5787943000736863464}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746937856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &746937860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746937856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40229eafa2a36847a22597b9cabea9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starText: {fileID: 746937858}
 --- !u!1 &797119506
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029916982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.445, y: 0, z: 1}
+  m_LocalPosition: {x: -0.22399996, y: 0, z: 1}
   m_LocalScale: {x: 0.074422225, y: 0.83725, z: 0.6698}
   m_Children: []
   m_Father: {fileID: 1579239462}
@@ -1106,11 +1137,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787943000703717410, guid: 3693dee65b9b5eb4fb3c5d033ebba393,
-        type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787943000703717412, guid: 3693dee65b9b5eb4fb3c5d033ebba393,
         type: 3}
