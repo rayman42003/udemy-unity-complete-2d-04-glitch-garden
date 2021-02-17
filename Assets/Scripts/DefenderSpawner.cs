@@ -18,9 +18,20 @@ public class DefenderSpawner : MonoBehaviour
     }
 
     private void OnMouseDown() {
+        int defenderCost = defender.getStarCost();
+        if (stars >= defenderCost) {
+            addStars(-defenderCost);
+            spawnDefender(getMouseWorldPos());
+        }
+    }
+
+    private Vector2 getMouseWorldPos() {
         Vector2 screenClickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        Vector2 worldClickPos = Camera.main.ScreenToWorldPoint(screenClickPos);
-        Vector2 snappedClickPos = new Vector2(Mathf.RoundToInt(worldClickPos.x), Mathf.RoundToInt(worldClickPos.y));
+        return Camera.main.ScreenToWorldPoint(screenClickPos);
+    }
+
+    private void spawnDefender(Vector2 worldPos) {
+        Vector2 snappedClickPos = new Vector2(Mathf.RoundToInt(worldPos.x), Mathf.RoundToInt(worldPos.y));
         Instantiate(defender, snappedClickPos, Quaternion.identity);
     }
 
