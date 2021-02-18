@@ -268,7 +268,7 @@ PrefabInstance:
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2699997
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
@@ -342,7 +342,7 @@ PrefabInstance:
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.27
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
@@ -648,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.27
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
@@ -727,7 +727,7 @@ PrefabInstance:
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2699997
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
@@ -1062,7 +1062,7 @@ PrefabInstance:
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2699999
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1980185405080071240, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
@@ -1108,6 +1108,16 @@ PrefabInstance:
         type: 3}
       propertyPath: enemy
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980185405080071241, guid: fd641c532ae3e594e81814f301506299,
+        type: 3}
+      propertyPath: maxSpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980185405080071241, guid: fd641c532ae3e594e81814f301506299,
+        type: 3}
+      propertyPath: minSpawnTime
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1980185405080071246, guid: fd641c532ae3e594e81814f301506299,
         type: 3}
