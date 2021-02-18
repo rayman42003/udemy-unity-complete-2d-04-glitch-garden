@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject enemy;
+    private Enemy enemyPrefab;
 
     [SerializeField]
     private float minSpawnTime = 2f;
@@ -17,7 +17,8 @@ public class Spawner : MonoBehaviour
     private IEnumerator Start() {
         while (isSpawning) {
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
-            Instantiate(enemy, transform.position, Quaternion.identity);
+            Enemy enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity) as Enemy;
+            enemy.transform.parent = transform;
         }
     }
 }
