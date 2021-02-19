@@ -6,9 +6,11 @@ public class DefenderSpawner : MonoBehaviour
     [SerializeField]
     private Defender defender;
 
+    [SerializeField]
+    private int stars = 100;
+
     private IntEvent onStarGeneration = new IntEvent();
     private IntEvent onStarAmountUpdated = new IntEvent();
-    private int stars = 100;
 
     private void Start() {
         foreach (DefenderIcon defenderIcon in FindObjectsOfType<DefenderIcon>()) {
