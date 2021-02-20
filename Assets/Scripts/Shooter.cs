@@ -8,6 +8,9 @@ public class Shooter : MonoBehaviour
     [SerializeField]
     private GameObject gun;
 
+    [SerializeField]
+    private bool debugHasEnemiesInLane;
+
     private EnemySpawner laneEnemySpawner;
     private Animator animator;
 
@@ -18,6 +21,7 @@ public class Shooter : MonoBehaviour
 
     private void Update() {
         bool hasEnemiesInLane = laneEnemySpawner.transform.childCount > 0;
+        debugHasEnemiesInLane = hasEnemiesInLane;
         animator.SetBool("isAttacking", hasEnemiesInLane);
     }
 
