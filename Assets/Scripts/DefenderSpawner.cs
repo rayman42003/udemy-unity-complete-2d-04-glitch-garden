@@ -20,6 +20,9 @@ public class DefenderSpawner : MonoBehaviour
     }
 
     private void OnMouseDown() {
+        if (!defender) {
+            return;
+        }
         int defenderCost = defender.getStarCost();
         if (stars >= defenderCost) {
             addStars(-defenderCost);
