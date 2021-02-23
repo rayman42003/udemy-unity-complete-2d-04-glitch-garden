@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8037922705847063157}
   - component: {fileID: 1802779269}
   - component: {fileID: -2202679790644329748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gnome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8037922706176760216}
   - component: {fileID: 8037922706176760222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8037922706734171355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

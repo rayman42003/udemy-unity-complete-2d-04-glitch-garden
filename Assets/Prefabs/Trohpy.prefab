@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555948629825267194}
   - component: {fileID: 7652802364067384817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5080787844264010576}
   - component: {fileID: 5080787844264010607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 167711869529755364}
   - component: {fileID: 4301163736611966520}
   - component: {fileID: -7645291311184110500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trohpy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5080787845815567343}
   - component: {fileID: 5080787845815567342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

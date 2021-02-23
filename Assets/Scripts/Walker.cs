@@ -14,7 +14,11 @@ public class Walker : MonoBehaviour
         }
     }
 
-    private void toggleWalking() {
+    private void startWalking() {
         isWalking = true;
+    }
+
+    private void stopWalking() {
+        isWalking = false;
     }
 }

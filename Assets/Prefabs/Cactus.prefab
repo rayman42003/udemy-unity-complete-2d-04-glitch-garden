@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1710079991}
   - component: {fileID: 1866587121264242443}
   - component: {fileID: 2668163178034524803}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,6 +69,7 @@ MonoBehaviour:
   projectile: {fileID: 2725504964233927828, guid: 7192abd73c8c2db47ab542217207c50e,
     type: 3}
   gun: {fileID: 7450527014379330439}
+  debugHasEnemiesInLane: 0
 --- !u!114 &1866587121264242443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1500542255310216991}
   - component: {fileID: 186678172280101378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4450688976912389168}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
