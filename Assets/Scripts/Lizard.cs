@@ -12,7 +12,6 @@ public class Lizard : MonoBehaviour
         GameObject other = collision.gameObject;
         Defender defender = other.GetComponent<Defender>();
         if (defender) {
-            Debug.Log($"Defender {other.name} encounted");
             fighter.attack(true);
         }
     }
@@ -22,7 +21,6 @@ public class Lizard : MonoBehaviour
         Defender defender = other.GetComponent<Defender>();
         if (defender) {
             fighter.attack(false);
-            Debug.Log($"Defender {other.name} EXIT");
         }
     }
 }

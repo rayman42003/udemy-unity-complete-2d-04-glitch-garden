@@ -19,7 +19,6 @@ public class Fighter : MonoBehaviour
     }
 
     public void meleeAttack() {
-        Debug.Log("meleeAttack called");
         Damager clone = Instantiate(hitbox, hitboxPosition.position, hitboxPosition.rotation);
         clone.gameObject.transform.parent = gameObject.transform;
     }
