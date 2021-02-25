@@ -24,7 +24,7 @@ public class Damagable : MonoBehaviour
     }
 
     public void registerOnKilled(UnityAction action) {
-        onDamaged.AddListener(action);
+        onKilled.AddListener(action);
     }
 
     public bool isInvulnerable() {
