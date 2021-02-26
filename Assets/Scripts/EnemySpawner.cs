@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
-    private Enemy enemyPrefab;
+    private Enemy[] enemyPrefabs;
 
     [SerializeField]
     private float minSpawnTime = 2f;
@@ -17,8 +17,12 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator Start() {
         while (isSpawning) {
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
-            Enemy enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity) as Enemy;
+            Enemy enemy = Instantiate(selectEnemy(), transform.position, Quaternion.identity) as Enemy;
             enemy.transform.parent = transform;
         }
+    }
+
+    private Enemy selectEnemy() {
+        return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
     }
 }

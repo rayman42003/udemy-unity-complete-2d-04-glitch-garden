@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 167711869529755364}
   - component: {fileID: 4301163736611966520}
   - component: {fileID: -7645291311184110500}
+  - component: {fileID: -679621277621615798}
   m_Layer: 6
   m_Name: Trohpy
   m_TagString: Untagged
@@ -272,6 +273,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-679621277621615798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080787845232223749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503ecb997ab278c4799e498874888df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 2
 --- !u!1 &5080787845815567312
 GameObject:
   m_ObjectHideFlags: 0
