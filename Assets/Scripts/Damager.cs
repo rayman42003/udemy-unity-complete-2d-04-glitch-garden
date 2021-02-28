@@ -17,4 +17,8 @@ public class Damager : MonoBehaviour
             }
         }
     }
+
+    public int getAttackPower() {
+        return attackPower;
+    }
 }

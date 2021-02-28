@@ -22,4 +22,8 @@ public class Fighter : MonoBehaviour
         Damager clone = Instantiate(hitbox, hitboxPosition.position, hitboxPosition.rotation);
         clone.gameObject.transform.parent = gameObject.transform;
     }
+
+    public Damager getHitbox() {
+        return hitbox;
+    }
 }
