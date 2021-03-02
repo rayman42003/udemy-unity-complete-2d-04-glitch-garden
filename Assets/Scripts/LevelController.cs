@@ -12,12 +12,6 @@ public class LevelController : MonoBehaviour
         gameTimer?.registerOnGameTimerFinished(() => startLastWave());
     }
 
-    private void Update() {
-        if (lastWave && enemyCount <= 0) {
-            onLevelCompleted.Invoke();
-        }
-    }
-
     private void startLastWave() {
         lastWave = true;
     }
@@ -28,6 +22,9 @@ public class LevelController : MonoBehaviour
 
     public void removeEnemy() {
         enemyCount--;
+        if (lastWave && enemyCount <= 0) {
+            onLevelCompleted.Invoke();
+        }
     }
 
     public void registerOnLevelCompleted(UnityAction action) {
