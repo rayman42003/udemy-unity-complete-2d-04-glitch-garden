@@ -17,10 +17,14 @@ public class Damagable : MonoBehaviour
 
         hitPoints -= amount;
         if (hitPoints <= 0) {
-            onKilled.Invoke();
-            Destroy(gameObject);
+            kill();
         }
         onDamaged.Invoke();
+    }
+
+    public void kill() {
+        onKilled.Invoke();
+        Destroy(gameObject);
     }
 
     public void registerOnKilled(UnityAction action) {

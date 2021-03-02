@@ -14,6 +14,10 @@ public class EnemySpawner : MonoBehaviour
 
     private bool isSpawning = true;
 
+    private void Awake() {
+        FindObjectOfType<GameTimer>().registerOnGameTimerFinished(() => isSpawning = false);
+    }
+
     private IEnumerator Start() {
         while (isSpawning) {
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));

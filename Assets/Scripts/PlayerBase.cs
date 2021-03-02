@@ -30,7 +30,6 @@ public class PlayerBase : MonoBehaviour
     }
 
     public void registerOnPlayerBaseKilled(UnityAction action) {
-        Debug.Log(onPlayerBaseKilled);
         onPlayerBaseKilled.AddListener(action);
     }
 

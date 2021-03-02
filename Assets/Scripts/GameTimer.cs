@@ -8,7 +8,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField]
     private float levelDuration = 10f;
 
-    private UnityEvent onLevelCompleted = new UnityEvent();
+    private UnityEvent onGameTimerFinished = new UnityEvent();
     private Slider slider;
 
     private void Start() {
@@ -19,8 +19,12 @@ public class GameTimer : MonoBehaviour
         slider.value = Time.timeSinceLevelLoad / levelDuration;
 
         if (Time.timeSinceLevelLoad >= levelDuration) {
-            Debug.Log("Level completed");
-            onLevelCompleted.Invoke();
+            onGameTimerFinished.Invoke();
+            enabled = false;
         }
+    }
+
+    public void registerOnGameTimerFinished(UnityAction action) {
+        onGameTimerFinished.AddListener(action);
     }
 }
