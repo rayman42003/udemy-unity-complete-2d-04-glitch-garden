@@ -21,8 +21,10 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator Start() {
         while (isSpawning) {
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
-            Enemy enemy = Instantiate(selectEnemy(), transform.position, Quaternion.identity) as Enemy;
-            enemy.transform.parent = transform;
+            if (isSpawning) {
+                Enemy enemy = Instantiate(selectEnemy(), transform.position, Quaternion.identity) as Enemy;
+                enemy.transform.parent = transform;
+            }
         }
     }
 
