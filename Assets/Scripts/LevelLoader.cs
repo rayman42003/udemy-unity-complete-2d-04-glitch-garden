@@ -24,10 +24,17 @@ public class LevelLoader : MonoBehaviour
 
         PlayerBase playerBase = FindObjectOfType<PlayerBase>();
         playerBase?.registerOnPlayerBaseKilled(() => StartCoroutine(delayedLoad(LOSE_SCREEN, gameOverLoadTime)));
+        LevelController levelController = FindObjectOfType<LevelController>();
+        levelController?.registerOnNextLevel(() => loadNextScene());
     }
 
     private IEnumerator delayedLoad(string scene, float delaySeconds) {
         yield return new WaitForSeconds(delaySeconds);
         SceneManager.LoadScene(scene);
+    }
+
+    private void loadNextScene() {
+        int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currSceneIndex + 1);
     }
 }

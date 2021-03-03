@@ -1581,6 +1581,11 @@ PrefabInstance:
       propertyPath: levelCompleteCanvas
       value: 
       objectReference: {fileID: 1482922003}
+    - target: {fileID: 9145608965863937950, guid: 0146f3d1843e3c342b40a7496227437b,
+        type: 3}
+      propertyPath: stars
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 9145608965863937951, guid: 0146f3d1843e3c342b40a7496227437b,
         type: 3}
       propertyPath: m_Name
