@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelCompleteCanvas: {fileID: 0}
+  levelLostCanvas: {fileID: 0}
 --- !u!82 &9145608965863937946
 AudioSource:
   m_ObjectHideFlags: 0

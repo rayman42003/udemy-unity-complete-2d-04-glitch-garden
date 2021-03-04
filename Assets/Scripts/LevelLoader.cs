@@ -11,9 +11,6 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private float splashScreenLoadTime = 1.75f;
 
-    [SerializeField]
-    private float gameOverLoadTime = 1f;
-
     private void Start() {
         string currScene = SceneManager.GetActiveScene().name;
         switch (currScene) {
@@ -22,8 +19,6 @@ public class LevelLoader : MonoBehaviour
                 break;
         }
 
-        PlayerBase playerBase = FindObjectOfType<PlayerBase>();
-        playerBase?.registerOnPlayerBaseKilled(() => StartCoroutine(delayedLoad(LOSE_SCREEN, gameOverLoadTime)));
         LevelController levelController = FindObjectOfType<LevelController>();
         levelController?.registerOnNextLevel(() => loadNextScene());
     }
@@ -36,5 +31,14 @@ public class LevelLoader : MonoBehaviour
     private void loadNextScene() {
         int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currSceneIndex + 1);
+    }
+
+    public void restartScene() {
+        int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currSceneIndex);
+    }
+
+    public void loadMainMenu() {
+        SceneManager.LoadScene(START_MENU);
     }
 }
