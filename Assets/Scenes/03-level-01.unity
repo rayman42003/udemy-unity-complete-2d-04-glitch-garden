@@ -1140,6 +1140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Base
       objectReference: {fileID: 0}
+    - target: {fileID: 2723748384971101132, guid: 2d4f95804169cb042b81c22f8f6c1f91,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2723748384971101133, guid: 2d4f95804169cb042b81c22f8f6c1f91,
         type: 3}
       propertyPath: m_RootOrder
@@ -1383,6 +1388,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Complete Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5203315452336275302, guid: 4d048e8bbb0e11c4ca59d388ba07f2b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d048e8bbb0e11c4ca59d388ba07f2b2, type: 3}
 --- !u!1001 &5225824809027551372
@@ -1405,7 +1415,7 @@ PrefabInstance:
     - target: {fileID: 8264169751041222067, guid: 983b9a9ba5987fc4fa17a469d04a0319,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 8264169751041222067, guid: 983b9a9ba5987fc4fa17a469d04a0319,
         type: 3}
