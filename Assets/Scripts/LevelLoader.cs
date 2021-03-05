@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
     private const string SPLASH_SCREEN = "01-splash-screen";
     private const string START_MENU = "02-start-menu";
     private const string LOSE_SCREEN = "99-lose-screen";
+    private const string OPTIONS_MENU = "999-options-menu";
 
     [SerializeField]
     private float splashScreenLoadTime = 1.75f;
@@ -40,6 +41,10 @@ public class LevelLoader : MonoBehaviour
 
     public void loadMainMenu() {
         SceneManager.LoadScene(START_MENU);
+    }
+
+    public void loadOptionsScreen() {
+        SceneManager.LoadScene(OPTIONS_MENU);
     }
 
     public void quitGame() {
