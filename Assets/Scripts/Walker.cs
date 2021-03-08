@@ -21,4 +21,12 @@ public class Walker : MonoBehaviour
     private void stopWalking() {
         isWalking = false;
     }
+
+    public float getWalkSpeed() {
+        return walkSpeed;
+    }
+
+    public void setWalkSpeed(float walkSpeed) {
+        this.walkSpeed = walkSpeed;
+    }
 }

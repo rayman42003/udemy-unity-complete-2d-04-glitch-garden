@@ -9,6 +9,13 @@ public class PlayerBase : MonoBehaviour
     private IntEvent onPlayerBaseDamaged = new IntEvent();
     private UnityEvent onPlayerBaseKilled = new UnityEvent();
 
+    private void Start() {
+        DifficultyController difficultyController = FindObjectOfType<DifficultyController>();
+        Difficulty difficulty = difficultyController.getDifficulty();
+        health = Mathf.RoundToInt(health * difficulty.getHealthScaling());
+        onPlayerBaseDamaged.Invoke(health);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) {
         GameObject other = collision.gameObject;
         Enemy enemy = other.GetComponent<Enemy>();

@@ -13,6 +13,11 @@ public class DefenderSpawner : MonoBehaviour
     private IntEvent onStarAmountUpdated = new IntEvent();
 
     private void Start() {
+        DifficultyController difficultyController = FindObjectOfType<DifficultyController>();
+        Difficulty difficulty = difficultyController.getDifficulty();
+        stars = Mathf.RoundToInt(stars * difficulty.getStartingStarAmountScaling());
+        onStarAmountUpdated.Invoke(stars);
+
         foreach (DefenderIcon defenderIcon in FindObjectsOfType<DefenderIcon>()) {
             defenderIcon.registerOnDefenderSelected((selectedDefender) => setDefender(selectedDefender));
         }
