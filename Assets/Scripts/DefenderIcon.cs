@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class DefenderIcon : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class DefenderIcon : MonoBehaviour
                 defender.registerOnDefenderSelected((selectedDefender) => disableIcon());
             }
         }
+
+        Text defenderCostText = GetComponentInChildren<Text>();
+        defenderCostText.text = defenderPrefab.getStarCost().ToString();
     }
 
     private void OnMouseDown() {
